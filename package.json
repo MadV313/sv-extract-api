@@ -5,7 +5,8 @@
   "scripts": {
     "start": "node server.js",
     "dev": "NODE_ENV=development node server.js",
-    "db:init": "psql \"$DATABASE_URL\" -f src/schema.sql"
+    "db:init": "psql \"$DATABASE_URL\" -f src/schema.sql",
+    "postinstall": "npm run db:init"
   },
   "dependencies": {
     "cors": "^2.8.5",
